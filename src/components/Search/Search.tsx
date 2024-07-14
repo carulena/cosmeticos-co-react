@@ -7,7 +7,7 @@ const Search = () => {
     display:flex
 `
     const SearchBox = styled.input `
-        width: 650px;
+        width: 40vw;
         height: 50px;
         border: none;
         background-color: #F0F0F0;

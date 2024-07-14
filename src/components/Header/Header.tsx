@@ -6,8 +6,11 @@ import { FaRegCircleUser } from "react-icons/fa6";
 const Header = () => {
   const Header = styled.div`
     align-items: center;
-    height: 150px;
+    height: 20vh;
     font-family: "Domine", serif;
+    width: 98.9vw;
+    border-bottom: 2px #707070 solid;
+    box-shadow: 0px 1px 5px 0px #707070;
   `;
   const HeaderBody = styled.div`
     display: flex;
@@ -16,7 +19,7 @@ const Header = () => {
   `;
   const Banner = styled.div`
     background-color: #4e4e4e;
-    height: 30px;
+    height: 5vh;
     color: white;
     width: 100%;
     text-align: center;
@@ -33,11 +36,11 @@ const Header = () => {
     font-style: normal;
     font-size: 15px;
     border: none;
-    margin:0 5vw 0 5vw
+    margin:0 3vw 0 3vw
 `;
 const Icons = styled.div`
     display:flex;
-    margin-left: 5vw;
+    margin-left: 5%;
     justify-content: space-between;
     min-width: 6vw;
 `;

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header/Header';
 import './index.css'
 import Footer from './components/Footer/Footer';
 const root = ReactDOM.createRoot(
@@ -10,7 +9,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header/>
     <App/>
     <Footer/>
   </React.StrictMode>

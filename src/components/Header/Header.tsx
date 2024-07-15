@@ -2,8 +2,14 @@ import styled from "styled-components";
 import Search from "../Search/Search";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { CartListState } from "../../state/atom";
+import { useFetchProductsList } from "../../state/hooks/useFetchProductsList";
+import { useCartList } from "../../state/hooks/useCartList";
 
 const Header = () => {
+
+  useFetchProductsList()
+  const cartItems = useCartList()
   const Header = styled.div`
     align-items: center;
     height: 20vh;
@@ -30,6 +36,10 @@ const Header = () => {
     font-weight: 900;
     font-style: normal;
     font-size: 35px;
+    a{
+      color: black;
+      text-decoration: none;
+    }
   `;
   const SelectProducts = styled.select`
     font-family: "Domine", serif;
@@ -43,19 +53,40 @@ const Icons = styled.div`
     margin-left: 5%;
     justify-content: space-between;
     min-width: 6vw;
-`;
+    align-items:center;
+`
+const Cart = styled.a`
+    display:flex;
+    align-items:center;
+`
+const ItemCart = styled.p`
+      background-color: #F48646;
+      color:white;
+      text-align: center;
+      border-radius: 50%;
+      height: 20px;
+      font-size:12px;
+      width: 20px;
+      align-content: center;
+
+`
   return (
     <Header>
       <Banner>Aproveite as nossas oportunidades!!!</Banner>
 
       <HeaderBody>
-        <Title>Cosméticos&Co</Title>
+        <Title><a href="/">Cosméticos&Co</a></Title>
         <SelectProducts>
           <option>Produtos</option>
         </SelectProducts>
         <Search/>
         <Icons>
-        <PiShoppingCartSimpleBold size={30}/>
+        <Cart href="/carrinho">
+          <PiShoppingCartSimpleBold size={30}/>
+         <ItemCart>{cartItems.length}
+
+         </ItemCart>
+        </Cart>
         <FaRegCircleUser size={30}/>
         </Icons>
       </HeaderBody>

@@ -11,6 +11,9 @@ const Footer = () => {
         font-style: normal;
         display:flex;
         align-items: center;
+        position: relative;
+        bottom:0;
+        width:95.2%
     `
     const ListaFooter = styled.ul`
         list-style-type: none;

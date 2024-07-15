@@ -54,7 +54,7 @@ const Sumario = () => {
     border: 1px solid #e5e5e5;
     flex-direction: column;
     width: 400px;
-    height: 300px;
+    height: 400px;
     position: fixed;
     float: right;
     right:0;
@@ -135,7 +135,7 @@ const Sumario = () => {
       <Line />
       <Informacoes>
         <p>Total</p>
-        <p>R${frete + (Number(total) - (desconto / 100) * Number(total))}</p>
+        <p>R${(frete + (Number(total) - (desconto / 100) * Number(total))).toFixed(2)}</p>
       </Informacoes>
       <div style={{ display: "flex", alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center" }}>

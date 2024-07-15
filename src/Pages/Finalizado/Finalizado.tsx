@@ -1,8 +1,4 @@
 import styled from "styled-components"
-import CardCarrinho from "../../components/CardCarrinho/CardCarrinho"
-import { useCarrinho } from "../../state/hooks/useCarrinho"
-import { separaUnicos } from "../../state/helpers/separaUnicos"
-import Sumario from "../../components/Sumario/Sumario"
 import { useNavigate } from "react-router-dom"
 
 const Finalizado = () => {

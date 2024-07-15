@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil"
 import { ProductsListState } from "../atom"
 
-export const useProductsList =()=>{
+export const useProdutos =()=>{
     return useRecoilValue(ProductsListState)
 }

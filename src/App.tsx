@@ -3,9 +3,10 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import Home from './Pages/Home/Home';
-import Products from './Pages/Products/Products';
+import Produtos from './Pages/Produtos/Produtos';
 import Header from './components/Header/Header';
 import Carrinho from './Pages/Carrinho/Carrinho';
+import Finalizado from './Pages/Finalizado/Finalizado';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Header/>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/produtos" element={<Products/>} />
+            <Route path="/produtos" element={<Produtos/>} />
             <Route path="/carrinho" element={<Carrinho/>} />
+            <Route path="/finalizado" element={<Finalizado/>} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

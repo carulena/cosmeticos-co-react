@@ -4,12 +4,13 @@ import { recoilPersist } from 'recoil-persist'
 const { persistAtom } = recoilPersist()
 export const ProductsListState = atom<any[]>({
     key:'ProductsListState',
-    default: []
+    default: [],
+    effects: [persistAtom]
 })
 
 
-export const CartListState = atom<any[]>({
+export const CartListState = atom<number[]>({
     key:'CartListState',
     default: [],
-    effects_UNSTABLE: [persistAtom],
+    effects: [persistAtom]
 })

@@ -57,10 +57,6 @@ const ValorTotal = styled.div `
 }   
 `
 
-
-// TODO: 
-// * Preço com desconto
-// * Adicionar imagem ao bucket
 const CardHome: FunctionComponent<{ produto: any }> = props => (
         <Card>
             <ImagemProduto imagem={props.produto.imagem_produto}/>

@@ -2,7 +2,7 @@
 import { FaSearch  } from "react-icons/fa";
 
 
-const Search = () => {
+const Busca = () => {
     const Search = styled.div `
     display:flex
 `
@@ -44,4 +44,4 @@ const Search = () => {
             </style> 
         </Search>
 )};
-export default Search
+export default Busca

@@ -6,18 +6,18 @@ function transformToJson(response:Response) {
         json
     );
 }    
-function  fetchProducts (){
+function  fetchProdutos (){
     return fetch('https://xfgxkvs7gg.execute-api.us-east-1.amazonaws.com/produtos')
     .then(transformToJson)
 }
 const currentUserNameQuery = selector({
     key: 'CurrentUserName',
     get: async ({get}) => {
-      const response = await fetchProducts();
+      const response = await fetchProdutos();
       return response;
     },
   });
-export const useFetchProductsList= () =>{
+export const useFetchProdutos= () =>{
     const setList = useSetRecoilState(ProductsListState);
     return setList(useRecoilValue(currentUserNameQuery))
 }

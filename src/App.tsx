@@ -7,6 +7,7 @@ import Produtos from './Pages/Produtos/Produtos';
 import Header from './components/Header/Header';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import Finalizado from './Pages/Finalizado/Finalizado';
+import DetalhesProduto from './Pages/DetalhesProduto/DetalhesProduto';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/produtos" element={<Produtos/>} />
             <Route path="/carrinho" element={<Carrinho/>} />
             <Route path="/finalizado" element={<Finalizado/>} />
+            <Route path="/detalhes/:id" element={<DetalhesProduto/>} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

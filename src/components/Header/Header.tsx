@@ -45,7 +45,8 @@ const Header = () => {
     font-style: normal;
     font-size: 15px;
     border: none;
-    margin:0 3vw 0 3vw
+    margin:0 3vw 0 3vw;
+    color: black
 `;
 const Icons = styled.div`
     display:flex;

@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import styled from "styled-components";
 import ImagemProduto from "../ImagemProduto/ImagemProduto";
+import { Link } from "react-router-dom";
 
 
 const Card = styled.div `
@@ -10,6 +11,7 @@ const Card = styled.div `
     font-weight: 900;
     font-style: normal;
     text-align: start;
+    color: black;
 `
 
 const NomeProduto = styled.p `
@@ -58,6 +60,7 @@ const ValorTotal = styled.div `
 `
 
 const CardHome: FunctionComponent<{ produto: any }> = props => (
+    <Link to={`/detalhes/${props.produto.produto_id}`}>
         <Card>
             <ImagemProduto imagem={props.produto.imagem_produto}/>
             <NomeProduto>{props.produto.nome_produto}</NomeProduto>
@@ -91,6 +94,7 @@ const CardHome: FunctionComponent<{ produto: any }> = props => (
             }
                 </PrecoProduto>
         </Card>
+        </Link>
     )
 
 

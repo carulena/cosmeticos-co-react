@@ -1,8 +1,8 @@
 import { useSetRecoilState } from "recoil"
-import { CartListState} from "../atom"
+import { ListaDeComprasState} from "../atom"
 
 export const useEsvaziaCarrinho = () =>{
-    const setCart = useSetRecoilState(CartListState);
+    const setCart = useSetRecoilState(ListaDeComprasState);
     return () => {
         return setCart([]);
       };

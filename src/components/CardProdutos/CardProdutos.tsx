@@ -1,10 +1,9 @@
 import { FunctionComponent } from "react"
 import ImagemProduto from "../ImagemProduto/ImagemProduto"
 import styled from "styled-components"
-import { useProdutos } from "../../state/hooks/useProdutos"
-import { useFetchProdutos } from "../../state/hooks/useFetchProdutos"
 import PrecoProduto from "../PrecoProduto/PrecoProduto"
 import { useAdicionarAoCarrinho } from "../../state/hooks/useAdicionarAoCarrinho"
+import { Link } from "react-router-dom"
 
 const CardProdutos: FunctionComponent<{ produto: any }> = props => {
     const setCart = useAdicionarAoCarrinho()
@@ -26,6 +25,7 @@ const CardProdutos: FunctionComponent<{ produto: any }> = props => {
     const NomeProduto = styled.p `
     text-align: start;
     font-size: 20px;
+    color: black
     `
     const TamanhoProduto = styled.p `
     font-size: 15px;
@@ -49,7 +49,10 @@ const CardProdutos: FunctionComponent<{ produto: any }> = props => {
     <Card>
         <ImagemProduto imagem={props.produto.imagem_produto}/>
         <InformacoesProduto>
+            
+        <Link to={`/detalhes/${props.produto.produto_id}`}>
         <NomeProduto>{props.produto.nome_produto}</NomeProduto>
+        </Link>
         <TamanhoProduto>{props.produto.tamanho_produto}</TamanhoProduto>
         <PrecoProduto 
             preco={props.produto.valor_produto} 

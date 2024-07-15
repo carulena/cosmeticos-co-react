@@ -8,6 +8,7 @@ import { useAdicionarAoCarrinho } from "../../state/hooks/useAdicionarAoCarrinho
 import { useRemoveUnidade } from "../../state/hooks/useRemoveUnidade";
 import { useRemoveCarrinho } from "../../state/hooks/useRemoveCarrinho";
 import PrecoProduto from "../PrecoProduto/PrecoProduto";
+import { Link } from "react-router-dom";
 
 
 const Card = styled.div `
@@ -30,7 +31,8 @@ const Produto = styled.div `
 `
 const NomeProduto = styled.p `
     text-align: start;
-    font-size: 15px;
+    font-size: 25px;
+    color: black
 `
 const InformacoesProduto = styled.div `
     margin-left: 30px
@@ -42,7 +44,6 @@ const Botoes = styled.div `
     flex-direction: column;
     align-items: flex-end;
     `
-
 const Quantidade = styled.div `
     margin: 30px;
     min-width: 100px
@@ -79,7 +80,10 @@ const CardCarrinho: FunctionComponent<{ produto_id: number, qtde: number }> = pr
             <Produto>
             <ImagemProduto imagem={produto.imagem_produto}/>
             <InformacoesProduto>
+                
+        <Link to={`/detalhes/${produto.produto_id}`}>
             <NomeProduto>{produto.nome_produto}</NomeProduto>
+        </Link>
             <PrecoProduto desconto={produto.desconto_produto} preco={produto.valor_produto}></PrecoProduto>
             </InformacoesProduto>
             </Produto>
@@ -91,7 +95,6 @@ const CardCarrinho: FunctionComponent<{ produto_id: number, qtde: number }> = pr
                     <BtnQtde onClick={() => adicionaAoCarrinho(produto)}>+</BtnQtde>
                 </Quantidade>
             </Botoes>
-
         </Card>
     )}
 

@@ -1,4 +1,4 @@
-import { selector, useRecoilValue, useSetRecoilState } from "recoil"
+import {useSetRecoilState } from "recoil"
 import { ListaDeProdutosState } from "../atom"
 export const useFetchProdutos= () =>{
     const setList = useSetRecoilState(ListaDeProdutosState);

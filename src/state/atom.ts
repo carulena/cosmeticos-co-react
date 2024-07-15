@@ -8,8 +8,6 @@ export const ListaDeProdutosState = atom<any[]>({
     effects: [persistAtom]
 })
 
-
-
 export const ListaDeComprasState = atom<number[]>({
     key:'CartListState',
     default: [],

@@ -55,7 +55,6 @@ const Sumario = () => {
     flex-direction: column;
     width: 400px;
     height: 400px;
-    position: fixed;
     float: right;
     right:0;
   `;
